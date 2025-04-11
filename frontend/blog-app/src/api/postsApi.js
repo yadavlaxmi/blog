@@ -20,6 +20,10 @@ export const likePost = (id, token) => axios.put(`${API}/${id}/like`, {}, {
 export const dislikePost = (id, token) => axios.put(`${API}/${id}/dislike`, {}, {
   headers: { Authorization: `Bearer ${token}` },
 });
-export const checkpostStatus=(id,token)=>axios.get(`${API}/${id}/status`,{},{
-  headers: { Authorization: `Bearer ${token}` },
-});
+// export const checkpostStatus=(id,token)=>axios.get(`${API}/${id}/status`,{},{
+//   headers: { Authorization: `Bearer ${token}` },
+// });
+export const checkpostStatus = (id, token) =>
+  axios.get(`${API}/${id}/status`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
